@@ -1,0 +1,148 @@
+==MAX HEAP====                      ERROR! - Invalid Command.
+HEAP_CREATE 4,6,1                      OK
+===MIN HEAP===                      ERROR! - Invalid Command.
+HEAP_CREATE 1,10,0                      OK
+===MAX_HEAP===                      ERROR! - Invalid Command.
+HEAP_CREATE 2,1,1                      OK
+HEAP_GETSIZE 1                      0
+HEAP_GETSIZE 2                      0
+HEAP_GETSIZE 4                      0
+HEAP_GETSIZE 3                      ERROR! - Heap with ID 3 does not exist and has no size.
+==MAX HEAP====                      ERROR! - Invalid Command.
+////////HEAP 4//////                      ERROR! - Invalid Command.
+==MAX HEAP====                      ERROR! - Invalid Command.
+HEAP_INSERT 4,99                      OK
+HEAP_INSERT 4,98                      OK
+HEAP_INSERT 4,97                      OK
+HEAP_DELETETOP 4                      OK
+HEAP_GETSIZE 4                      2
+HEAP_INSERT 4,96                      OK
+HEAP_INSERT 4,95                      OK
+HEAP_INSERT 4,94                      OK
+HEAP_INSERT 4,100                      OK
+HEAP_GETSIZE 4                      6
+HEAP_READTOP 4                      100
+HEAP_PRINT 4                      100 97 98 95 94 96 
+HEAP_SORT 4                      OK
+HEAP_PRINT 4                      94 95 96 97 98 100 
+===MIN HEAP===                      ERROR! - Invalid Command.
+//////HEAP 1/////                      ERROR! - Invalid Command.
+===MIN HEAP===                      ERROR! - Invalid Command.
+HEAP_INSERT 1,85                      OK
+HEAP_DELETETOP 1                      OK
+HEAP_READTOP 1                      ERROR! - Heap with ID 1 exists but is empty and read can not be performed.
+HEAP_GETSIZE 1                      0
+HEAP_INSERT 1,44                      OK
+HEAP_INSERT 1,96                      OK
+HEAP_READTOP 1                      44
+HEAP_INSERT 1,32                      OK
+HEAP_DELETETOP 1                      OK
+HEAP_GETSIZE 1                      2
+HEAP_INSERT 1,12                      OK
+HEAP_GETSIZE 1                      3
+HEAP_INSERT 1,89                      OK
+HEAP_READTOP 1                      12
+HEAP_INSERT 1,100                      OK
+HEAP_DELETETOP 1                      OK
+HEAP_GETSIZE 1                      4
+HEAP_PRINT 1                      44 89 100 96 
+HEAP_SORT 1                      OK
+HEAP_PRINT 1                      44 89 96 100 
+===MAX_HEAP===                      ERROR! - Invalid Command.
+///HEAP 2///                      ERROR! - Invalid Command.
+===MAX_HEAP===                      ERROR! - Invalid Command.
+HEAP_INSERT 2,85                      OK
+HEAP_INSERT 2,100                      ERROR! - Heap with ID 2 does not exist or full.
+HEAP_GETSIZE 2                      1
+HEAP_DELETETOP 2                      OK
+HEAP_GETSIZE 2                      0
+HEAP_INSERT 2,99                      OK
+HEAP_PRINT 1                      44 89 96 100 
+=====================                      ERROR! - Invalid Command.
+//////AVL//////                      ERROR! - Invalid Command.
+=====================                      ERROR! - Invalid Command.
+AVLTREE_CREATE 1                      OK
+AVLTREE_CREATE 2                      OK
+AVLTREE_CREATE 7                      OK
+/////AVL 1//////                      ERROR! - Invalid Command.
+AVLTREE_INSERT 1,12                      OK
+AVLTREE_INSERT 1,15                      OK
+AVLTREE_INSERT 1,10                      OK
+AVLTREE_INSERT 1,20                      OK
+AVLTREE_GETSIZE 1                      4
+AVLTREE_DELETE 1,10                      OK
+AVLTREE_INSERT 1,25                      OK
+AVLTREE_GETSIZE 1                      4
+AVLTREE_INSERT 1,22                      OK
+AVLTREE_DELETE 1,12                      OK
+AVLTREE_GETSIZE 1                      4
+===AVL Traversals===                      ERROR! - Invalid Command.
+AVLTREE_INORDER 1                      15 20 22 25 
+AVLTREE_PREORDER 1                      20 15 25 22 
+AVLTREE_POSTORDER 1                      15 22 25 20 
+====================                      ERROR! - Invalid Command.
+AVLTREE_SEARCH 1,15                      OK - True
+AVLTREE_SEARCH 1,9                      OK - False
+AVLTREE_SEARCH 1,22                      OK - True
+AVLTREE_INSERT 1,16                      OK
+AVLTREE_INORDER 1                      15 16 20 22 25 
+AVLTREE_PREORDER 1                      20 15 16 25 22 
+AVLTREE_POSTORDER 1                      16 15 22 25 20 
+AVLTREE_DELETE 1,16                      OK
+AVLTREE_DELETE 1,165                      ERROR! - Value 165 does not exist in the tree with ID 1.
+AVLTREE_INORDER 1                      15 20 22 25 
+AVLTREE_PREORDER 1                      20 15 25 22 
+AVLTREE_POSTORDER 1                      15 22 25 20 
+                      
+/////AVL 2////////                      ERROR! - Invalid Command.
+AVLTREE_INSERT 2,8                      OK
+AVLTREE_INSERT 2,10                      OK
+AVLTREE_INSERT 2,5                      OK
+AVLTREE_INSERT 2,17                      OK
+AVLTREE_GETSIZE 2                      4
+AVLTREE_INSERT 2,2                      OK
+AVLTREE_INSERT 2,23                      OK
+AVLTREE_INORDER 2                      2 5 8 10 17 23 
+AVLTREE_PREORDER 2                      8 5 2 17 10 23 
+AVLTREE_POSTORDER 2                      2 5 10 23 17 8 
+AVLTREE_SEARCH 2,15                      OK - False
+AVLTREE_SEARCH 2,1                      OK - False
+AVLTREE_GETSIZE 2                      6
+AVLTREE_INSERT 2,14                      OK
+AVLTREE_DELETE 2,23                      OK
+AVLTREE_DELETE 2,3                      ERROR! - Value 3 does not exist in the tree with ID 2.
+AVLTREE_INSERT 2,9                      OK
+AVLTREE_SEARCH 2,8                      OK - True
+AVLTREE_INORDER 2                      2 5 8 9 10 14 17 
+AVLTREE_PREORDER 2                      8 5 2 10 9 17 14 
+AVLTREE_POSTORDER 2                      2 5 9 14 17 10 8 
+AVLTREE_GETSIZE 2                      7
+                      
+/////AVL 7/////////                      ERROR! - Invalid Command.
+AVLTREE_INSERT 7,-12	                      OK
+AVLTREE_INSERT 7,-2                      OK
+AVLTREE_INSERT 7,-300                      OK
+AVLTREE_INSERT 7,46                      OK
+AVLTREE_INSERT 7,-55                      OK
+AVLTREE_INSERT 7,-610                      OK
+AVLTREE_INSERT 7,77                      OK
+AVLTREE_GETSIZE 7                      7
+AVLTREE_INORDER 7                      -610 -300 -55 -12 -2 46 77 
+AVLTREE_PREORDER 7                      -12 -300 -610 -55 46 -2 77 
+AVLTREE_POSTORDER 7                      -610 -55 -300 -2 77 46 -12 
+AVLTREE_DELETE 7,-12                      OK
+AVLTREE_DELETE 7,-300                      OK
+AVLTREE_INSERT 7,444                      OK
+AVLTREE_DELETE 7,5                      ERROR! - Value 5 does not exist in the tree with ID 7.
+AVLTREE_INSERT 7,10                      OK
+AVLTREE_SEARCH 7,1                      OK - False
+AVLTREE_SEARCH 7,10                      OK - True
+AVLTREE_SEARCH 7,-300                      OK - False
+AVLTREE_GETSIZE 7                      7
+AVLTREE_INORDER 7                      -610 -55 -2 10 46 77 444 
+AVLTREE_PREORDER 7                      46 -2 -55 -610 10 77 444 
+AVLTREE_POSTORDER 7                      -610 -55 10 -2 444 77 46 
+                      
+                      
+                      
+TEST                      ERROR! - Invalid Command.

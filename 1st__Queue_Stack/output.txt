@@ -1,0 +1,65 @@
+STACK_CREATE 0                      OK
+STACK_CREATE 1                      OK
+STACK_CREATE 8                      OK
+                      
+                      
+STACK_PUSH 0,40                      OK
+STACK_PUSH 0,20                      OK
+STACK_PUSH 0,30                      OK
+                      
+                      
+STACK_PUSH 1,100                      OK
+STACK_PUSH 1,-100                      ERROR! - Push value is not greater than zero.
+STACK_PUSH 1,2000                      OK
+STACK_PUSH 1,30000                      OK
+STACK_PUSH 1,400000                      OK
+                      
+STACK_PUSH 9,55                      ERROR! - Stack with ID 9 does not exist and data can not be pushed.
+                      
+STACK_POP 0                      30
+STACK_POP 1                      400000
+STACK_POP 8                      ERROR! - Stack with ID 8 exists but is empty and pop can not be performed.
+STACK_POP 6                      ERROR! - Stack with ID 6 does not exist and pop can not be performed.
+                      
+STACK_READ 1                      30000
+                      
+STACK_GETSIZE 0                      2
+STACK_GETSIZE 1                      3
+STACK_GETSIZE 8                      0
+STACK_DESTROY 0                      OK
+STACK_DESTROY 1                      OK
+STACK_CREATE 5                      OK
+STACK_DESTROY 5                      OK
+                      
+--------------                      ERROR! - Invalid Command.
+                      
+QUEUE_CREATE 0                      OK
+QUEUE_CREATE 1                      OK
+QUEUE_CREATE 8                      OK
+                      
+QUEUE_INSERT 0,40                      OK
+QUEUE_INSERT 0,20                      OK
+QUEUE_INSERT 0,30                      OK
+                      
+QUEUE_INSERT 1,100                      OK
+QUEUE_INSERT 1,-100                      ERROR! - Insert value is not greater than zero.
+QUEUE_INSERT 1,2000                      OK
+QUEUE_INSERT 1,30000                      OK
+QUEUE_INSERT 1,400000                      OK
+                      
+QUEUE_INSERT 9,55                      ERROR! - Queue with ID 9 does not exist and data can not be inserted.
+                      
+QUEUE_DELETE 0                      OK
+QUEUE_DELETE 1                      OK
+QUEUE_DELETE 8                      ERROR! - Queue with ID 8 exists but is empty and delete can not be performed.
+QUEUE_DELETE 6                      ERROR! - queue with ID 6 does not exist and delete can not be performed.
+QUEUE_READ 1                      2000
+                      
+QUEUE_GETSIZE 0                      2
+QUEUE_GETSIZE 1                      3
+QUEUE_GETSIZE 8                      0
+QUEUE_DESTROY 0                      OK
+QUEUE_DESTROY 1                      OK
+QUEUE_DESTROY 5                      ERROR! - Queue with ID 5 does not exist and can not be deleted.
+QUEUE_CREATE 5                      OK
+QUEUE_DESTROY 5                      OK
